@@ -14,7 +14,7 @@ const HeroSection = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-xl opacity-90 font-poppins">
-              Discover the secrets to building a thriving online presence and unlocking your financial independence in the digital age.
+              A comprehensive 31-page guide to building a thriving online presence and unlocking your financial independence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
@@ -41,7 +41,7 @@ const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-brand-pink/20 rounded-lg mix-blend-overlay"></div>
               <div className="absolute -bottom-4 -right-4 bg-brand-turquoise text-cosmic font-bold px-6 py-3 rounded-full transform rotate-3">
-                Only $19.99
+                Only £100
               </div>
             </div>
           </div>
