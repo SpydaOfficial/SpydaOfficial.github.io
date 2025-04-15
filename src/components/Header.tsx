@@ -1,7 +1,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import LogoComponent from "./LogoComponent";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +13,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-cosmic font-playfair flex items-center gap-1">
-          <span className="text-brand-pink">Mya's</span> World
-        </Link>
+        <LogoComponent />
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">

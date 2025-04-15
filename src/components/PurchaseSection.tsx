@@ -1,12 +1,13 @@
 
-import { Check, Download } from "lucide-react";
+import { Check, Download, Users } from "lucide-react";
 
 const PurchaseSection = () => {
   const benefits = [
-    "Instant digital delivery (PDF, EPUB, MOBI formats)",
+    "Complete 31-page guide to online entrepreneurship",
+    "Comprehensive price list guide included",
     "Lifetime access to future updates",
-    "Exclusive access to private community",
-    "30-day email support from Mya",
+    "Exclusive access to private community group chat",
+    "Connect with other successful sellers for support",
     "Bonus: Content calendar template",
     "Bonus: Pricing calculator spreadsheet"
   ];
@@ -15,7 +16,7 @@ const PurchaseSection = () => {
     <section id="buy" className="py-20 bg-cosmic text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-sm uppercase tracking-wider text-brand-pink font-medium mb-2">Limited Time Offer</h2>
+          <h2 className="text-sm uppercase tracking-wider text-brand-pink font-medium mb-2">Premium Resource</h2>
           <h3 className="text-4xl md:text-5xl font-playfair font-bold mb-4">
             Get Your Copy Today
           </h3>
@@ -34,9 +35,9 @@ const PurchaseSection = () => {
                 </h4>
                 
                 <div className="mb-8">
-                  <div className="text-3xl font-bold">$19.99</div>
-                  <div className="text-white/70 line-through">$39.99</div>
-                  <div className="text-brand-pink font-medium mt-1">50% OFF - Limited Time!</div>
+                  <div className="text-3xl font-bold">£100.00</div>
+                  <div className="text-white/70 line-through">£150.00</div>
+                  <div className="text-brand-pink font-medium mt-1">Limited Time Offer!</div>
                 </div>
                 
                 <div className="space-y-3 mb-8">
@@ -50,9 +51,10 @@ const PurchaseSection = () => {
                   ))}
                 </div>
                 
-                <div className="p-4 rounded-lg bg-white/10 mb-6">
+                <div className="p-4 rounded-lg bg-white/10 mb-6 flex items-center gap-3">
+                  <Users className="text-brand-pink w-5 h-5 flex-shrink-0" />
                   <p className="text-sm">
-                    <span className="font-medium">Note:</span> This product contains adult content and is intended for individuals 18 years or older. By purchasing, you confirm you are of legal age.
+                    Join our supportive community of entrepreneurs and get real-time advice and encouragement on your journey.
                   </p>
                 </div>
               </div>
@@ -121,7 +123,7 @@ const PurchaseSection = () => {
                     className="w-full bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-4 rounded-lg text-center transition-colors flex items-center justify-center gap-2 mt-6"
                   >
                     <Download className="w-5 h-5" />
-                    Buy Now & Download Instantly
+                    Buy Now (£100)
                   </button>
                 </form>
                 
