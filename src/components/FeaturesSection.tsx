@@ -1,4 +1,3 @@
-
 import { BookOpen, Star, DollarSign, ShieldCheck, BookMarked, BarChart } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -6,7 +5,7 @@ const FeaturesSection = () => {
     {
       icon: <BookOpen className="w-10 h-10 text-brand-pink" />,
       title: "Comprehensive Content",
-      description: "Over 200 pages of actionable advice, real-world examples, and step-by-step instructions.",
+      description: "31 pages of actionable advice, real-world examples, and step-by-step instructions.",
     },
     {
       icon: <Star className="w-10 h-10 text-brand-pink" />,
@@ -42,7 +41,7 @@ const FeaturesSection = () => {
           <h2 className="text-sm uppercase tracking-wider text-brand-pink font-medium mb-2">What's Inside</h2>
           <h3 className="text-4xl md:text-5xl font-playfair font-bold text-cosmic mb-4">Book Features</h3>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Everything you need to know to build a successful online presence in the adult entertainment industry
+            A concise 31-page guide packed with essential insights for the online adult entertainment industry
           </p>
         </div>
         
@@ -66,7 +65,7 @@ const FeaturesSection = () => {
                 Ready to Transform Your Online Presence?
               </h3>
               <p className="text-white/80 mb-6">
-                This guide contains all the secrets I've learned over years in the industry. Don't waste time and money figuring it out on your own.
+                This 31-page guide contains all the secrets I've learned over years in the industry.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
@@ -85,7 +84,7 @@ const FeaturesSection = () => {
             </div>
             <div className="md:w-1/3 flex justify-center">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                <div className="text-4xl font-bold text-brand-turquoise mb-2">$19.99</div>
+                <div className="text-4xl font-bold text-brand-turquoise mb-2">£100</div>
                 <div className="text-lg text-white/90 mb-1">One-time payment</div>
                 <div className="text-sm text-white/70">Instant digital delivery</div>
               </div>

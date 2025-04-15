@@ -1,12 +1,11 @@
-
 import { Check, Download, Users } from "lucide-react";
 
 const PurchaseSection = () => {
   const benefits = [
-    "Complete 31-page guide to online entrepreneurship",
-    "Comprehensive price list guide included",
+    "31-page comprehensive guide to online entrepreneurship",
+    "Pricing guide included",
     "Lifetime access to future updates",
-    "Exclusive access to private community group chat",
+    "Access to private community group chat",
     "Connect with other successful sellers for support",
     "Bonus: Content calendar template",
     "Bonus: Pricing calculator spreadsheet"
@@ -21,7 +20,7 @@ const PurchaseSection = () => {
             Get Your Copy Today
           </h3>
           <p className="max-w-2xl mx-auto text-white/80">
-            Join thousands of successful online entrepreneurs who have transformed their digital presence with this guide
+            Join thousands of successful online entrepreneurs with this 31-page guide
           </p>
         </div>
         
@@ -36,8 +35,7 @@ const PurchaseSection = () => {
                 
                 <div className="mb-8">
                   <div className="text-3xl font-bold">£100.00</div>
-                  <div className="text-white/70 line-through">£150.00</div>
-                  <div className="text-brand-pink font-medium mt-1">Limited Time Offer!</div>
+                  <div className="text-brand-pink font-medium mt-1">Instant Digital Delivery</div>
                 </div>
                 
                 <div className="space-y-3 mb-8">
@@ -54,7 +52,7 @@ const PurchaseSection = () => {
                 <div className="p-4 rounded-lg bg-white/10 mb-6 flex items-center gap-3">
                   <Users className="text-brand-pink w-5 h-5 flex-shrink-0" />
                   <p className="text-sm">
-                    Join our supportive community of entrepreneurs and get real-time advice and encouragement on your journey.
+                    Join our supportive community of entrepreneurs and get real-time advice.
                   </p>
                 </div>
               </div>
