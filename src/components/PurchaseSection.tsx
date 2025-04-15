@@ -1,4 +1,3 @@
-
 import { Check, Download, Users } from "lucide-react";
 
 const PurchaseSection = () => {
@@ -35,9 +34,7 @@ const PurchaseSection = () => {
                 </h4>
                 
                 <div className="mb-8">
-                  <div className="text-3xl font-bold">£100.00 
-                    <span className="text-lg line-through text-white/50 ml-2">£150.00</span>
-                  </div>
+                  <div className="text-3xl font-bold">£100.00</div>
                   <div className="text-brand-pink font-medium mt-1">Instant Digital Delivery</div>
                 </div>
                 
