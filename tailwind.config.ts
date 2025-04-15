@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +56,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        // Custom colors from the ebook design
+        cosmic: {
+          DEFAULT: '#1A1F2C',
+          blue: '#3064A7',
+          light: '#7897C5'
+        },
+        brand: {
+          turquoise: '#5FD9D9',
+          pink: '#FF719A',
+          darkPink: '#FF4D87',
+          blue: '#4169E1'
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
