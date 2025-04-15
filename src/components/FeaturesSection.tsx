@@ -1,3 +1,4 @@
+
 import { BookOpen, Star, DollarSign, ShieldCheck, BookMarked, BarChart } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -85,7 +86,9 @@ const FeaturesSection = () => {
             <div className="md:w-1/3 flex justify-center">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
                 <div className="text-4xl font-bold text-brand-turquoise mb-2">£100</div>
-                <div className="text-lg text-white/90 mb-1">One-time payment</div>
+                <div className="text-lg text-white/90 mb-1">
+                  <span className="line-through text-white/60 mr-2">£150</span>One-time payment
+                </div>
                 <div className="text-sm text-white/70">Instant digital delivery</div>
               </div>
             </div>

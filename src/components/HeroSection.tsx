@@ -33,16 +33,12 @@ const HeroSection = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/4a75294d-ae5a-4330-9471-baaa24b6c509.png" 
-                alt="The Internet Hoe eBook Cover" 
-                className="w-full max-w-md rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-brand-pink/20 rounded-lg mix-blend-overlay"></div>
-              <div className="absolute -bottom-4 -right-4 bg-brand-turquoise text-cosmic font-bold px-6 py-3 rounded-full transform rotate-3">
-                Only £100
+            <div className="relative bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+              <div className="text-4xl font-bold text-brand-turquoise mb-2">£100</div>
+              <div className="text-lg text-white/90 mb-1">
+                <span className="line-through text-white/60 mr-2">£150</span>Limited Time Offer
               </div>
+              <div className="text-sm text-white/70">Instant digital delivery</div>
             </div>
           </div>
         </div>
