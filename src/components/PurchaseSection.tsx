@@ -1,13 +1,43 @@
+
 import { Check, Download, Users } from "lucide-react";
+import { toast } from "@/components/ui/sonner";
+import { useState } from "react";
 
 const PurchaseSection = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const benefits = [
     "31-page comprehensive guide to online entrepreneurship",
     "Pricing guide included",
-    "Lifetime access to future updates",
+    "Access to future updates",
     "Access to private community group chat",
     "Connect with other successful sellers for support"
   ];
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // In a real implementation, this would connect to a payment processor API
+      // and send the ebook via email after successful payment
+      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
+      
+      toast.success("Purchase successful! Check your email for your ebook", {
+        description: "Your ebook has been sent to " + email,
+        duration: 5000,
+      });
+      
+      setEmail("");
+    } catch (error) {
+      toast.error("Payment failed. Please try again.", {
+        description: "There was an issue processing your payment",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="buy" className="py-20 bg-cosmic text-white">
@@ -32,7 +62,10 @@ const PurchaseSection = () => {
                 </h4>
                 
                 <div className="mb-8">
-                  <div className="text-3xl font-bold">£100.00</div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-3xl font-bold">£100.00</div>
+                    <div className="text-sm line-through text-white/70">£150.00</div>
+                  </div>
                   <div className="text-brand-pink font-medium mt-1">Instant Digital Delivery</div>
                 </div>
                 
@@ -60,7 +93,7 @@ const PurchaseSection = () => {
                   Complete Your Purchase
                 </h4>
                 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       Email Address
@@ -71,7 +104,10 @@ const PurchaseSection = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-all"
                       placeholder="your@email.com"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
+                    <p className="text-xs mt-1 text-gray-500">Your ebook will be delivered to this email immediately after purchase</p>
                   </div>
                   
                   <div>
@@ -117,15 +153,27 @@ const PurchaseSection = () => {
                   <button 
                     type="submit" 
                     className="w-full bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-4 rounded-lg text-center transition-colors flex items-center justify-center gap-2 mt-6"
+                    disabled={isSubmitting}
                   >
                     <Download className="w-5 h-5" />
-                    Buy Now (£100)
+                    {isSubmitting ? "Processing..." : "Buy Now (£100)"}
                   </button>
                 </form>
                 
                 <div className="mt-6 text-center text-sm text-gray-500">
-                  <p>Secure payment processing. No hidden fees.</p>
+                  <p>Secure payment processing. All major cards accepted.</p>
                   <p className="mt-1">Your information is protected by 256-bit SSL encryption.</p>
+                  <p className="mt-4 text-xs">By completing this purchase, you agree to our terms and conditions. <span className="font-semibold">No refunds will be provided.</span></p>
+                </div>
+                
+                <div className="mt-6 p-3 bg-gray-50 rounded-lg">
+                  <div className="text-xs font-medium text-center">Accepted Payment Methods</div>
+                  <div className="flex justify-center items-center gap-3 mt-2">
+                    <div className="text-xs text-gray-600">Visa</div>
+                    <div className="text-xs text-gray-600">Mastercard</div>
+                    <div className="text-xs text-gray-600">Amex</div>
+                    <div className="text-xs text-gray-600">PayPal</div>
+                  </div>
                 </div>
               </div>
             </div>
