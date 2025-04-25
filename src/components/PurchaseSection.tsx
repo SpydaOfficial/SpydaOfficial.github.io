@@ -6,9 +6,7 @@ const PurchaseSection = () => {
     "Pricing guide included",
     "Lifetime access to future updates",
     "Access to private community group chat",
-    "Connect with other successful sellers for support",
-    "Bonus: Content calendar template",
-    "Bonus: Pricing calculator spreadsheet"
+    "Connect with other successful sellers for support"
   ];
 
   return (
