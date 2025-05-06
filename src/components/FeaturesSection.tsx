@@ -1,3 +1,5 @@
+
+import { motion } from "framer-motion";
 import { BookOpen, Star, DollarSign, ShieldCheck, BookMarked, BarChart } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -35,62 +37,107 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="features" className="py-24 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-sm uppercase tracking-wider text-brand-pink font-medium mb-2">What's Inside</h2>
-          <h3 className="text-4xl md:text-5xl font-playfair font-bold text-cosmic mb-4">Book Features</h3>
-          <p className="max-w-2xl mx-auto text-gray-600">
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-cosmic mb-4 relative inline-block">
+            Book Features
+            <motion.span 
+              className="absolute bottom-0 left-0 w-full h-1 bg-brand-pink/30"
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            ></motion.span>
+          </h3>
+          <p className="max-w-2xl mx-auto text-gray-600 mt-6 text-lg">
             A concise 31-page guide packed with essential insights for the online adult entertainment industry
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)" }}
             >
-              <div className="mb-4">{feature.icon}</div>
+              <motion.div 
+                className="mb-4 bg-gray-50 p-3 rounded-full inline-block"
+                whileHover={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 0.5 }}
+              >
+                {feature.icon}
+              </motion.div>
               <h4 className="text-xl font-bold text-cosmic mb-3">{feature.title}</h4>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
         
-        <div className="mt-16 bg-gradient-to-r from-cosmic to-cosmic-blue p-8 md:p-12 rounded-2xl text-white">
-          <div className="flex flex-col md:flex-row items-center gap-8">
+        <motion.div 
+          className="mt-20 bg-gradient-to-r from-cosmic to-cosmic-blue p-10 md:p-12 rounded-3xl text-white overflow-hidden relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-brand-pink/10 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
             <div className="md:w-2/3">
-              <h3 className="text-2xl md:text-3xl font-playfair font-bold mb-4">
+              <h3 className="text-3xl md:text-4xl font-playfair font-bold mb-6">
                 Ready to Transform Your Online Presence?
               </h3>
-              <p className="text-white/80 mb-6">
+              <p className="text-white/90 mb-8 text-lg">
                 This 31-page guide contains all the secrets I've learned over years in the industry.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a 
+                <motion.a 
                   href="#buy" 
-                  className="bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-3 rounded-full text-center transition-colors"
+                  className="bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-3 rounded-full text-center transition-all"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)" }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   Get Your Copy Now
-                </a>
-                <a 
+                </motion.a>
+                <motion.a 
                   href="#testimonials" 
                   className="bg-transparent border-2 border-white hover:border-brand-turquoise text-white hover:text-brand-turquoise font-medium px-8 py-3 rounded-full text-center transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   See What Others Say
-                </a>
+                </motion.a>
               </div>
             </div>
-            <div className="md:w-1/3 flex justify-center">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
-                <div className="text-4xl font-bold text-brand-turquoise mb-2">£100</div>
+            <motion.div 
+              className="md:w-1/3 flex justify-center"
+              whileHover={{ scale: 1.05, rotate: 3 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+            >
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-xl">
+                <div className="text-5xl font-bold text-brand-turquoise mb-2">£100</div>
                 <div className="text-lg text-white/90 mb-1">One-time payment</div>
                 <div className="text-sm text-white/70">Instant digital delivery</div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
