@@ -29,7 +29,7 @@ const AboutSection = () => {
         
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <motion.div 
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 text-center"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

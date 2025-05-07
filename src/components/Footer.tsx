@@ -10,16 +10,16 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <motion.div 
-            className="mb-8 md:mb-0"
+            className="mb-8 md:mb-0 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold font-playfair flex items-center">
+            <h2 className="text-3xl font-bold font-playfair flex items-center justify-center">
               <span className="text-brand-pink">Mya's</span> World
             </h2>
-            <p className="text-gray-400 mt-3 max-w-md">
+            <p className="text-gray-400 mt-3 max-w-md mx-auto">
               Empowering individuals to embrace their authentic selves and achieve financial independence through online entrepreneurship.
             </p>
           </motion.div>

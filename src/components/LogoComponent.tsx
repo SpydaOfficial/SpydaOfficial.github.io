@@ -17,7 +17,7 @@ const LogoComponent: React.FC<LogoProps> = ({ className = '', size = 'medium' })
   return (
     <Link to="/" className={`flex items-center gap-2 ${className}`}>
       <img 
-        src="/lovable-uploads/854dfaaa-ee72-4549-9458-6399a7c6640e.png" 
+        src="/lovable-uploads/4a75294d-ae5a-4330-9471-baaa24b6c509.png" 
         alt="Mya's World Logo" 
         className={`${sizeClasses[size]} object-contain rounded-full`}
       />

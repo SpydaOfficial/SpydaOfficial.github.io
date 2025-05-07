@@ -146,6 +146,7 @@ const PurchaseSection = () => {
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-center"
                 >
                   <h4 className="text-3xl font-bold mb-8 text-cosmic font-playfair">
                     Complete Your Purchase
