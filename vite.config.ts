@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => ({
         // Copy CNAME file to dist folder during build
         if (fs.existsSync('./CNAME')) {
           fs.copyFileSync('./CNAME', './dist/CNAME');
+          console.log('CNAME file copied to dist folder');
+        } else {
+          console.log('CNAME file not found');
+          // Create CNAME file if it doesn't exist
+          fs.writeFileSync('./dist/CNAME', 'myas.world');
+          console.log('CNAME file created in dist folder');
         }
       }
     }
@@ -30,4 +36,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/',
 }));
