@@ -5,23 +5,23 @@ import { Star } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      content: "This ebook literally changed my life! I went from struggling to pay rent to making $5K a month in just 10 weeks using Mya's strategies.",
-      author: "Jessica K.",
+      content: "This incredible guide transformed my life completely! I went from barely making ends meet to generating $7K monthly within just 8 weeks. The confidence I've gained to take control of my finances is priceless.",
+      author: "Mistress Power",
       stars: 5
     },
     {
-      content: "As someone new to the industry, I was lost before finding this guide. The safety tips alone are worth the price, but the marketing strategies are pure gold.",
-      author: "Amber T.",
+      content: "As a newcomer, this guide was my salvation. Not only did the safety strategies protect me, but I've built a loyal following that brings in consistent income. I'm financially independent for the first time in my life!",
+      author: "Lady Domina",
       stars: 5
     },
     {
-      content: "I've bought several guides before, but this is the only one with practical, actionable advice. Mya doesn't sugarcoat anything - she tells it like it is.",
-      author: "Tiffany R.",
+      content: "After trying countless guides with empty promises, this one delivered real results. The practical advice helped me build a six-figure business in under 6 months. I now have the freedom to live life on my own terms.",
+      author: "Queen of Income",
       stars: 5
     },
     {
-      content: "Within 3 months of following this guide, I've built a loyal subscriber base and quit my 9-5. The template messages saved me countless hours!",
-      author: "Layla M.",
+      content: "Following this guide changed everything for me. Within just 3 months, I've established a thriving subscriber base that generates $10K monthly. I've never felt more empowered and financially secure!",
+      author: "Empress Control",
       stars: 5
     }
   ];
@@ -30,14 +30,14 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-24 bg-brand-turquoise">
       <div className="container mx-auto px-6">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 0.9, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-sm uppercase tracking-wider text-white font-medium mb-2">The Importance Of</h2>
-          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-cosmic mb-4 relative inline-block">
+          <h2 className="text-sm uppercase tracking-wider text-white font-medium mb-2">Hear From Our Success Stories</h2>
+          <h3 className="text-5xl md:text-6xl font-playfair font-bold text-cosmic mb-6 relative inline-block">
             TESTIMONIALS
             <motion.span 
               className="absolute bottom-0 left-0 w-full h-1 bg-white/30"
@@ -47,42 +47,6 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             ></motion.span>
           </h3>
-          
-          <motion.div 
-            className="flex justify-center mt-10 mb-10"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-brand-pink shadow-xl">
-              <motion.img 
-                src="/lovable-uploads/6ad12c1c-15de-4ede-9f7e-154596542510.png" 
-                alt="Mya's World Avatar" 
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
-          </motion.div>
-        </motion.div>
-        
-        <motion.div 
-          className="max-w-3xl mx-auto bg-white rounded-2xl p-8 shadow-xl mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <p className="text-gray-800 mb-6 text-lg">
-            This part is a no-brainer! In any business, reviews are crucial, good or bad. Especially in this industry, where building credibility is key, reviews are your best friend. With so many scams floating around, we can't afford to ignore this.
-          </p>
-          <p className="text-gray-800 mb-6">
-            It doesn't take much to keep a customer satisfied; just avoid being entitled or rude. If someone's unhappy, do your best to resolve it and keep the door open for future business. You'll soon learn that low spenders often complain the loudest and are the first to demand refunds—BUT WE DO NOT REFUND, HONEY! If you've tried to make things right, take a screenshot or jot down notes as proof and move on; don't let it get to you.
-          </p>
-          <p className="text-gray-800 font-medium">
-            Don't hesitate to ask customers for reviews—they usually want to support your success and will be happy to help!
-          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
