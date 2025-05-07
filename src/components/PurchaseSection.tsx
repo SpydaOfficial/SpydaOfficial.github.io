@@ -186,6 +186,8 @@ const PurchaseSection = () => {
                         <div className="text-xs text-gray-600">Mastercard</div>
                         <div className="text-xs text-gray-600">Amex</div>
                         <div className="text-xs text-gray-600">PayPal</div>
+                        <div className="text-xs text-gray-600">Clearpay</div>
+                        <div className="text-xs text-gray-600">Klarna</div>
                       </div>
                     </motion.div>
                   </div>
