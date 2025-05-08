@@ -37,4 +37,16 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['@radix-ui/react-toast', '@radix-ui/react-tooltip', 'framer-motion'],
+        },
+      },
+    },
+    minify: true,
+    sourcemap: false,
+  }
 }));

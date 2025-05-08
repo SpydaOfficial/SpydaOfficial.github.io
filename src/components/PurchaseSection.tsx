@@ -2,8 +2,11 @@
 import { Check, Download, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
 
 const PurchaseSection = () => {
+  const { toast } = useToast();
+  
   const benefits = [
     "31-page comprehensive guide to online entrepreneurship",
     "Pricing guide included",
@@ -13,6 +16,11 @@ const PurchaseSection = () => {
   ];
 
   const handleBuyNow = () => {
+    toast({
+      title: "Redirecting to payment page",
+      description: "You'll now be redirected to our secure payment page.",
+      duration: 3000,
+    });
     window.location.href = "https://buy.stripe.com/6oE9Eg77PaAN3Is3cc";
   };
 
@@ -39,7 +47,7 @@ const PurchaseSection = () => {
         <div className="animate-float-delay absolute bottom-[20%] right-[10%] w-64 h-64 rounded-full bg-brand-turquoise blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 max-w-full overflow-x-hidden">
         <motion.div 
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
@@ -181,7 +189,7 @@ const PurchaseSection = () => {
                       whileHover={{ y: -2 }}
                     >
                       <div className="text-sm font-medium text-center">Accepted Payment Methods</div>
-                      <div className="flex justify-center items-center gap-5 mt-3">
+                      <div className="flex justify-center items-center gap-5 mt-3 flex-wrap">
                         <div className="text-xs text-gray-600">Visa</div>
                         <div className="text-xs text-gray-600">Mastercard</div>
                         <div className="text-xs text-gray-600">Amex</div>
