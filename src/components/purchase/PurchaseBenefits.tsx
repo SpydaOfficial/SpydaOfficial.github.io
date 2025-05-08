@@ -36,10 +36,10 @@ const PurchaseBenefits = ({ benefits }: PurchaseBenefitsProps) => {
           className="flex items-start gap-3 group hover:bg-white/5 p-3 rounded-xl transition-colors"
           variants={itemVariants}
         >
-          <div className="mt-1 bg-brand-pink/20 p-1 rounded-full group-hover:bg-brand-pink/40 transition-colors">
+          <div className="mt-1 flex-shrink-0 bg-brand-pink/20 p-1 rounded-full group-hover:bg-brand-pink/40 transition-colors">
             <Check className="w-4 h-4 text-brand-pink" />
           </div>
-          <div className="text-lg">{benefit}</div>
+          <div className="text-base md:text-lg break-words">{benefit}</div>
         </motion.div>
       ))}
     </motion.div>

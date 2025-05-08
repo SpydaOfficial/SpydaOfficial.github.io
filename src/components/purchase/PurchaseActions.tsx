@@ -40,10 +40,10 @@ const PurchaseActions = () => {
           >
             <Button 
               onClick={handleBuyNow}
-              className="w-full bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-8 rounded-xl text-center transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl text-xl"
+              className="w-full bg-brand-pink hover:bg-brand-darkPink text-white font-medium px-8 py-6 rounded-xl text-center transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl text-xl"
             >
               <Download className="w-6 h-6" />
-              Buy Now (£100)
+              <span>Buy Now (£100)</span>
             </Button>
           </motion.div>
           

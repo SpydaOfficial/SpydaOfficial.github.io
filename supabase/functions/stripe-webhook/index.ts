@@ -8,7 +8,7 @@ const resendApiKey = Deno.env.get("RESEND_API_KEY") || "";
 const stripe = new Stripe(stripeSecretKey, { apiVersion: "2023-10-16" });
 const resend = new Resend(resendApiKey);
 
-const EBOOK_URL = "https://myas.world/ebook/internet-hoe-guide.pdf"; // Update this with your actual ebook URL
+const EBOOK_URL = "https://www.dropbox.com/scl/fo/o6xujypa5fqjderi3nvoc/AFC1Xi2VbWcNL-IjlItZJ5A?rlkey=cbhx6k1gab94u6ouuc4r4wbfu&st=5to10x0o&dl=0"; // Updated Dropbox link
 const ADMIN_EMAIL = "welcome2myasworld@gmail.com";
 
 const corsHeaders = {

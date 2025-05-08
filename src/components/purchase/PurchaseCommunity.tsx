@@ -10,7 +10,7 @@ const PurchaseCommunity = () => {
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <Users className="text-brand-pink w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform" />
-      <p className="text-lg">
+      <p className="text-lg break-words">
         Join our supportive community of entrepreneurs and get real-time advice.
       </p>
     </motion.div>
