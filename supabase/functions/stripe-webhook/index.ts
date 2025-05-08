@@ -59,38 +59,46 @@ serve(async (req) => {
 
       console.log(`Payment was successful for ${customerEmail}`);
 
-      // Send ebook to customer
-      await resend.emails.send({
-        from: "Mya's World <sales@myas.world>",
-        to: [customerEmail],
-        subject: "Your Internet Hoe Guide is Ready!",
-        html: `
-          <h1>Thank You for Your Purchase!</h1>
-          <p>Hi there,</p>
-          <p>Thank you for purchasing "The Internet Hoe Guide". Your payment has been successfully processed.</p>
-          <p>You can download your copy of the guide using the link below:</p>
-          <p><a href="${EBOOK_URL}" target="_blank">Download Your Internet Hoe Guide</a></p>
-          <p>If you have any questions or need assistance, feel free to reply to this email.</p>
-          <p>Best regards,</p>
-          <p>Mya's World Team</p>
-        `,
-      });
+      try {
+        // Send ebook to customer
+        const customerEmailResponse = await resend.emails.send({
+          from: "Mya's World <sales@myas.world>",
+          to: [customerEmail],
+          subject: "Your Internet Hoe Guide is Ready!",
+          html: `
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Hi there,</p>
+            <p>Thank you for purchasing "The Internet Hoe Guide". Your payment has been successfully processed.</p>
+            <p>You can download your copy of the guide using the link below:</p>
+            <p><a href="${EBOOK_URL}" target="_blank">Download Your Internet Hoe Guide</a></p>
+            <p>If you have any questions or need assistance, feel free to reply to this email.</p>
+            <p>Best regards,</p>
+            <p>Mya's World Team</p>
+          `,
+        });
+        
+        console.log("Email sent to customer:", customerEmailResponse);
 
-      // Send notification to admin
-      await resend.emails.send({
-        from: "Mya's World <sales@myas.world>",
-        to: [ADMIN_EMAIL],
-        subject: "New Sale: The Internet Hoe Guide",
-        html: `
-          <h1>New Sale Alert!</h1>
-          <p>Great news! You've made another sale of "The Internet Hoe Guide".</p>
-          <p>Customer Email: ${customerEmail}</p>
-          <p>Purchase Date: ${new Date().toLocaleString()}</p>
-          <p>The guide has been automatically sent to the customer.</p>
-        `,
-      });
-
-      console.log(`Emails sent to customer (${customerEmail}) and admin (${ADMIN_EMAIL})`);
+        // Send notification to admin
+        const adminEmailResponse = await resend.emails.send({
+          from: "Mya's World <sales@myas.world>",
+          to: [ADMIN_EMAIL],
+          subject: "New Sale: The Internet Hoe Guide",
+          html: `
+            <h1>New Sale Alert!</h1>
+            <p>Great news! You've made another sale of "The Internet Hoe Guide".</p>
+            <p>Customer Email: ${customerEmail}</p>
+            <p>Purchase Date: ${new Date().toLocaleString()}</p>
+            <p>The guide has been automatically sent to the customer.</p>
+          `,
+        });
+        
+        console.log("Email sent to admin:", adminEmailResponse);
+      } catch (emailError) {
+        console.error("Error sending emails:", emailError);
+        // Even if email sending fails, we'll return success to Stripe
+        // but log the error for debugging
+      }
     }
 
     return new Response(JSON.stringify({ received: true }), {
