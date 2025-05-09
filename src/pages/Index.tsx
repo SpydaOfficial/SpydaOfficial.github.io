@@ -4,7 +4,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import PurchaseSection from "@/components/PurchaseSection";
+import PurchaseSection from "@/components/purchase/PurchaseSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => {
@@ -14,6 +14,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <FeaturesSection />
+      {/* Templates section removed as requested */}
       <TestimonialsSection />
       <PurchaseSection />
       <Footer />
