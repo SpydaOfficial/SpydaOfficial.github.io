@@ -146,7 +146,6 @@ const PurchaseSection = () => {
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-center"
                 >
                   <h4 className="text-3xl font-bold mb-8 text-cosmic font-playfair">
                     Complete Your Purchase
@@ -186,8 +185,6 @@ const PurchaseSection = () => {
                         <div className="text-xs text-gray-600">Mastercard</div>
                         <div className="text-xs text-gray-600">Amex</div>
                         <div className="text-xs text-gray-600">PayPal</div>
-                        <div className="text-xs text-gray-600">Clearpay</div>
-                        <div className="text-xs text-gray-600">Klarna</div>
                       </div>
                     </motion.div>
                   </div>
