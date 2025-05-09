@@ -50,13 +50,7 @@ const PurchaseSection = () => {
           <h2 className="text-sm uppercase tracking-wider text-brand-pink font-medium mb-2">Premium Resource</h2>
           <h3 className="text-5xl md:text-6xl font-playfair font-bold mb-4 relative inline-block">
             Get Your Copy Today
-            <motion.span 
-              className="absolute bottom-0 left-0 w-full h-1 bg-brand-pink/30"
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            ></motion.span>
+            {/* Removed underline element here */}
           </h3>
           <p className="max-w-2xl mx-auto text-white/80 mt-6 text-lg">
             Join thousands of successful online entrepreneurs with this 31-page guide
@@ -86,9 +80,24 @@ const PurchaseSection = () => {
                   </h4>
                   
                   <div className="mb-10">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 relative">
                       <div className="text-4xl font-bold">£100.00</div>
                       <div className="text-sm line-through text-white/70">£150.00</div>
+                      {/* Added the "Only £100" text positioned to overlap with the image */}
+                      <motion.div 
+                        className="absolute -left-16 -top-10 bg-brand-turquoise text-cosmic font-bold px-5 py-2 rounded-full z-20 -rotate-12"
+                        animate={{ 
+                          rotate: [-12, -8, -12],
+                          y: [0, -5, 0]
+                        }}
+                        transition={{ 
+                          duration: 3, 
+                          ease: "easeInOut", 
+                          repeat: Infinity
+                        }}
+                      >
+                        Only £100
+                      </motion.div>
                     </div>
                     <div className="text-brand-pink font-medium mt-2 flex items-center">
                       <span className="mr-2">Instant Digital Delivery</span>
@@ -120,7 +129,7 @@ const PurchaseSection = () => {
                       className="flex items-start gap-3 group hover:bg-white/5 p-3 rounded-xl transition-colors"
                       variants={itemVariants}
                     >
-                      <div className="mt-1 bg-brand-pink/20 p-1 rounded-full group-hover:bg-brand-pink/40 transition-colors">
+                      <div className="bg-brand-pink/20 p-1 rounded-full group-hover:bg-brand-pink/40 transition-colors">
                         <Check className="w-4 h-4 text-brand-pink" />
                       </div>
                       <div className="text-lg">{benefit}</div>
@@ -173,7 +182,11 @@ const PurchaseSection = () => {
                     <div className="mt-8 text-center text-gray-500">
                       <p>Secure payment processing. All major cards accepted.</p>
                       <p className="mt-2">Your information is protected by 256-bit SSL encryption.</p>
-                      <p className="mt-6 text-sm">By completing this purchase, you agree to our terms and conditions. <span className="font-semibold">No refunds will be provided.</span></p>
+                      <p className="mt-6 text-sm">
+                        By completing this purchase, you agree to our terms and conditions.
+                        <br /> 
+                        <span className="font-semibold">No refunds will be provided.</span>
+                      </p>
                     </div>
                     
                     <motion.div 
@@ -183,8 +196,8 @@ const PurchaseSection = () => {
                       <div className="text-sm font-medium text-center">Accepted Payment Methods</div>
                       <div className="flex justify-center items-center gap-5 mt-3">
                         <div className="text-xs text-gray-600">Visa</div>
-                        <div className="text-xs text-gray-600">Mastercard</div>
-                        <div className="text-xs text-gray-600">Amex</div>
+                        {/* Removed "Mastercard" */}
+                        {/* Removed "Amex" */}
                         <div className="text-xs text-gray-600">PayPal</div>
                         <div className="text-xs text-gray-600">Clearpay</div>
                         <div className="text-xs text-gray-600">Klarna</div>
