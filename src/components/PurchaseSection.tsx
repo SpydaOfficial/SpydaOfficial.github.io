@@ -80,24 +80,10 @@ const PurchaseSection = () => {
                   </h4>
                   
                   <div className="mb-10">
-                    <div className="flex items-center gap-3 relative">
+                    <div className="flex items-center gap-3">
                       <div className="text-4xl font-bold">£100.00</div>
                       <div className="text-sm line-through text-white/70">£150.00</div>
-                      {/* Added the "Only £100" text positioned to overlap with the image */}
-                      <motion.div 
-                        className="absolute -left-16 -top-10 bg-brand-turquoise text-cosmic font-bold px-5 py-2 rounded-full z-20 -rotate-12"
-                        animate={{ 
-                          rotate: [-12, -8, -12],
-                          y: [0, -5, 0]
-                        }}
-                        transition={{ 
-                          duration: 3, 
-                          ease: "easeInOut", 
-                          repeat: Infinity
-                        }}
-                      >
-                        Only £100
-                      </motion.div>
+                      {/* Removed the "Only £100" text */}
                     </div>
                     <div className="text-brand-pink font-medium mt-2 flex items-center">
                       <span className="mr-2">Instant Digital Delivery</span>

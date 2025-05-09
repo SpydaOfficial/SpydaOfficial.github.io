@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { ExternalLink, Star } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -78,8 +78,11 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <motion.div 
-            className="flex flex-col items-center"
+          <motion.a 
+            href="https://uk.trustpilot.com/review/myas.world"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:opacity-90 transition-opacity"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
@@ -88,8 +91,12 @@ const TestimonialsSection = () => {
                 <Star key={i} className="fill-cosmic text-cosmic w-6 h-6" />
               ))}
             </div>
-            <div className="text-2xl font-playfair text-cosmic">Mya's World</div>
-          </motion.div>
+            <div className="flex items-center gap-2">
+              <div className="text-2xl font-playfair text-cosmic">Mya's World</div>
+              <ExternalLink className="w-4 h-4 text-cosmic" />
+            </div>
+            <div className="text-sm text-cosmic/70 mt-1">View our Trustpilot reviews</div>
+          </motion.a>
         </motion.div>
       </div>
     </section>
